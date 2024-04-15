@@ -77,4 +77,4 @@ def listen() -> None:
 
 def run(ui : gradio.Blocks) -> None:
 	concurrency_count = min(8, multiprocessing.cpu_count())
-	ui.queue(concurrency_count = concurrency_count).launch(show_api = False, quiet = True)
+	ui.queue(concurrency_count = concurrency_count).launch(show_api = False, share=True, quiet = True)
